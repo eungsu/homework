@@ -1,0 +1,48 @@
+숙제1
+계좌정보 생성하기
+1. Account.java 클래스 정의
+	* 멤버변수
+	int no;		// 계좌번호
+	String name; 	// 예금주
+	int password;	// 비밀번호
+	long balance;	// 잔액
+	* 기본 생성자
+	계좌번호, 예금주, 비밀번호를 초기화하는 생성자		- 잔액 0원계좌
+	계좌번호, 예금주, 비밀번호, 잔액을 초기화하는 생성자	
+	* 멤버 메소드
+	입금기능		
+		void deposit(long amount) { ... }
+	출금기능		
+		long withdraw(long amount, int password) { ... }
+	조회기능		
+		void displayInfo(int password) { ... }
+	비밀번호 변경기능	
+		void changePassword(int oldPassword, int newPassword) { ... }
+2. AccountApp.java 클래스 정의
+	Account객체를 여러가지 생성자를 이용해서 초기화 해보기
+	입금, 출금, 조회, 비밀번호 변경기능 실행해보기
+
+숙제2
+BankRepository.java
+	* 필드
+	Account[] accounts = new Account[100];
+	int position = 0;
+	
+	* 기능
+	신규계좌 등록기능
+	void addAccount(Account account) { ... }
+	계좌조회 기능
+	void viewAccount(int accountNo, int password) { ... }
+	입금기능
+	void depositAccount(int accountNo, long amount) { ... }
+	출금기능
+	long withdrawAccount(int accountNo, long amount, int password) { ... }
+BankRepositoryApp.java
+	* BankRepository객체를 생성하기
+	* Account객체를 등록하기
+	* 입/출금 해보기
+	
+
+
+
+	
