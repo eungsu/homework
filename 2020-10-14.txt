@@ -1,0 +1,20 @@
+퀴즈1
+	RandomUtils 클래스를 정의
+		1부터 100범위의 정수 중에 무작위로 정수 5개를 배열에 담아서 
+		반환하는 정적 메소드 정의하기
+		public class RandomUtils {
+		    static int[] randomInteger() {
+			int[] numbers = new int[5]
+
+			// Math.random()과 for문을 사용해서 임의의 난수를 
+			// 뽑아서 배열에 순서대로 저장하는 코드 작성
+
+			return numbers;
+		    }
+		}
+	RandomUtilsApp 클래스를 정의
+		public static void main(String[] args) {
+			int[] 난수 = RandomUtils.randomInteger();
+			// 난수 배열에 저장된 숫자 출력
+		}
+		
