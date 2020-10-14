@@ -72,5 +72,9 @@
 		    }
 
 		}
-
+	RandomUtilsApp 클래스를 정의
+		public static void main(String[] args) {
+			int[] 로또번호들 = RandomUtils.lotto();
+			// 로또번호들 출력
+		}
 		
