@@ -22,7 +22,31 @@
 			int[] 난수 = RandomUtils.randomInteger();
 			// 난수 배열에 저장된 숫자 출력
 		}
-퀴즈2
+퀴즈 2 
+	위에서 정의한 RandomUtils 클래스에
+		정수가 들어있는 배열과 숫자하나(양의 정수)를 전달받아서 
+		그 숫자가 배열에 포함되어 있으면 true, 없으면 false를 반환하는 정적 메소드	
+		
+		// 배열과 숫자를 전달받어서 그 숫자가 배열에 포함되어 있으면 true, 없으면 false를 반환한다. 
+		static boolean isExist(int[] numbers, int num) {
+		    boolean result = false;
+		    for (int number : numbers) {
+			// 배열에서 하나뽑아낸 숫자가 num으로 전달받은 숫자와 일치하면 result에 true를 대입한다.
+		    }
+		    return result;
+		}
+	RandomUtilsApp 클래스를 정의
+		public static void main(String[] args) {
+			int[] 숫자들 = {10, 20, 3, 50, 15, 62};
+			boolean result1 = RandomUtils.isExist(숫자들, 3);
+			System.out.println(result1); // true가 출력됨
+
+			boolean result2 = RandomUtils.isExist(숫자들, 44);
+			System.out.println(result2); // false가 출력됨
+		}
+	
+
+퀴즈3
 	위에서 정의한 RandomUtils 클래스에
 		1부터 45범위의 정수중에서 무작위로 정수 6개를 배열에 담아서 
 		반환하는 정적 메소드 정의하기
@@ -35,7 +59,7 @@
 			    // 1부터 45사이의 무작위 숫자 획득: int x = (int)(Math.random()*45) + 1
 			    // numbers배열에 지금 획득한 숫자가 없으면(if문), 그 숫자를 배열에 저장한다.
 			    // 1. 무작위 숫자 획득하기
-			    // 2. 배열에 그 숫자가 있는지 확인하기 --> 아래의 isExist(배열, 숫자)메소드을 실행 결과값 저장
+			    // 2. 배열에 그 숫자가 있는지 확인하기 --> 위에서 정의한 isExist(배열, 숫자)메소드의 결과값 저장
 			    // 3. 결과값이 false 일때만(존재하지 않는 경우) 배열에 숫자 저장
 			    // 4. position값 1증가
 
@@ -46,10 +70,7 @@
 
 			return numbers;
 		    }
-		    // 
-		    static boolean isExist(int[] numbers, int num) {
 
-		    }
 		}
 
 		
