@@ -9,6 +9,10 @@
 			// 1부터 100까지의 무작위 숫자 획득 : int x = (int)(Math.random()*100) + 1
 			// Math.random()과 for문(5회반복)을 사용해서 임의의 난수를 
 			// 뽑아서 배열에 순서대로 저장하는 코드 작성
+			for (int i=0; i<5; i++) {
+				// 1. 무작위 정수 획득하기
+				// 정수를 배열에 담기
+			}
 
 			return numbers;
 		    }
@@ -25,6 +29,26 @@
 		public class RandomUtils {
 		    static int[] lotto() {
 		    	int[] numbers = new int[6];
+			int position = 0;
+
+		        while (true) {
+			    // 1부터 45사이의 무작위 숫자 획득: int x = (int)(Math.random()*45) + 1
+			    // numbers배열에 지금 획득한 숫자가 없으면(if문), 그 숫자를 배열에 저장한다.
+			    // 1. 무작위 숫자 획득하기
+			    // 2. 배열에 그 숫자가 있는지 확인하기 --> 아래의 isExist(배열, 숫자)메소드을 실행 결과값 저장
+			    // 3. 결과값이 false 일때만(존재하지 않는 경우) 배열에 숫자 저장
+			    // 4. position값 1증가
+
+			    if (position == 6) {	// position값이 6이되면 중복되지 않은 숫자 6개가 획득된 것임, 반복탈출
+				break;
+			    }
+			}			
+
+			return numbers;
+		    }
+		    // 
+		    static boolean isExist(int[] numbers, int num) {
+
 		    }
 		}
 
