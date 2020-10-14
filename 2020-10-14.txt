@@ -5,8 +5,9 @@
 		public class RandomUtils {
 		    static int[] randomInteger() {
 			int[] numbers = new int[5]
-
-			// Math.random()과 for문을 사용해서 임의의 난수를 
+			
+			// 1부터 100까지의 무작위 숫자 획득 : int x = (int)(Math.random()*100) + 1
+			// Math.random()과 for문(5회반복)을 사용해서 임의의 난수를 
 			// 뽑아서 배열에 순서대로 저장하는 코드 작성
 
 			return numbers;
@@ -17,4 +18,14 @@
 			int[] 난수 = RandomUtils.randomInteger();
 			// 난수 배열에 저장된 숫자 출력
 		}
+퀴즈2
+	위에서 정의한 RandomUtils 클래스에
+		1부터 45범위의 정수중에서 무작위로 정수 6개를 배열에 담아서 
+		반환하는 정적 메소드 정의하기
+		public class RandomUtils {
+		    static int[] lotto() {
+		    	int[] numbers = new int[6];
+		    }
+		}
+
 		
