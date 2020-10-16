@@ -1,0 +1,131 @@
+문제1.
+public static void main(String[] args) {
+	// "안녕하세요"를 화면에 출력하시오.
+	// TO-DO
+}
+
+문제2.
+public static void main(String[] args) {
+	// 변수를 선언하고, 아래에 제시된 내용을 변수에 저장하고 화면에 출력하시오.
+	// 이름, 나이, 몸무게, 키, 결혼여부 등의 정보를 변수에 저장하고, 출력하기
+	// TO-DO
+}
+
+문제3.
+public static void main(String[] args) {
+	// 숫자를 입력받아서 짝수인지 홀수인지 출력하기
+	// 입력받은 숫자가 짝수면 "짝수", 홀수면 "홀수"라고 출력한다.
+	Scanner sc = new Scanner(System.in);
+	System.out.println("숫자를 입력하세요");
+	// TO-DO 	
+}
+
+문제4.
+public static void main(String[] args) {
+	// 숫자를 입력받아서 1부터 그 숫자까지의 합계를 구하기
+	Scanner sc = new Scanner(System.in);
+	int total = 0;
+	System.out.println("숫자를 입력하세요");
+	// TO-DO
+}
+
+문제5.
+public static void main(String[] args) {
+	// 숫자를 3개 입력받아서 그 숫자들의 평균과 합계를 계산하고 출력하기
+	Scanner sc = new Scanner(System.in);
+	int total = 0;
+	double average = 0.0;
+	System.out.println("첫번째 숫자를 입력하세요");
+	// TO-DO
+	System.out.println("두번째 숫자를 입력하세요");
+	// TO-DO
+	System.out.println("세번째 숫자를 입력하세요");
+	// TO-DO
+}
+
+문제6.
+public static void main(String[] args) {
+	// 아래의 배열에 저장된 숫자들 중에서 짝수들의 합계를 구하고 출력하기
+	int[] numbers = {13, 15, 20, 17, 8, 32, 40};
+	int total = 0;
+	// TO-DO
+}
+
+문제7.
+public static void main(String[] args) {
+	// 아래의 배열에 저장된 숫자들 중에서 사용자로 부터 입력받은 숫자들의 범위내에 속하는 숫자들의 합계를 출력하기
+	int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+	Scanner sc = new Scanner(System.in);
+	int total = 0;
+	System.out.println("최소값을 입력하시오(1~20사이)");
+	// TO-DO
+	System.out.println("최대값을 입력하시오(1~20사이)");
+	// TO-DO
+}
+
+문제8.
+public class ArrayUtils {
+	// 숫자 두 개를 전달받아서 그 숫자범위에 속하는 숫자들로 구성된 배열을 반환하는 메소드를 작성하기
+	int[] createArrayByRange(int min, int max) {
+		// TO-DO
+	}
+}
+
+public static void main(String[] args) {
+	int[] arr1 = ArraysUtils.createArrayByRange(10, 20);
+	int[] arr2 = ArraysUtils.createArrayByRange(15, 38);
+	// TO-DO arr1과 arr2 배열 출력하기
+}
+
+문제9.
+public class ArraysUtils {
+	// 실수배열을 전달받아서 실수배열에 저장된 값을 정수로 변환한 값을 담고 있는 배열을 반환하는 메소드를 작성하기
+	int[] convertDoubleToInt(double[] numbers) {
+		// TO-DO
+	}
+}
+
+public static void main(String[] args) {
+	double[] scores = {2.1, 4.3, 2.7, 1.9, 3.1, 2.5, 3.9};
+	int[] numbers = ArraysUtils.converDoubleToInt(scores);
+	// TO-DO numbers 배열 출력하기
+}
+
+문제10.
+public class Product {
+	// 번호, 이름, 제조회사, 가격, 할인가격 정보를 담는 객체를 위한 클래스.
+	// 멤버변수, 기본 생성자, 모든 멤버변수를 초기화하는 생성자를 정의하시오.
+}
+
+문제11.
+public static void main(String[] args) {
+	// 문제10.에서 정의한 Product 클래스로 객체를 생성하고, 멤버변수를 초기화 하고, 객체의 값을 출력하기
+	// TO-DO
+}
+
+문제12.
+public static void main(String[] args) {
+	// 배열에 저장된 Product들의 가격합계와 할인가격합계를 계산해서 출력하기
+	Product[] products = new Product[3];
+	products[0] = new Product(10, "공책", "모나미", 1000, 800);
+	products[1] = new Product(20, "지우개", "모나미", 500, 410);
+	products[2] = new Product(30, "색연필", "모나미", 9000, 8600);
+
+	int totalPrice = 0;
+	int totalDiscountPrice = 0;
+	// TO-DO
+}
+
+문제13.
+public static void main(String[] args) {
+	// 배열에 저장된 상품들 중에서 가장 비싼 상품의 이름을 출력하기
+	Product[] products = new Product[3];
+	products[0] = new Product(10, "공책", "모나미", 1000, 800);
+	products[1] = new Product(20, "지우개", "모나미", 500, 410);
+	products[2] = new Product(30, "색연필", "모나미", 9000, 8600);
+	
+	int maxPrice = 0;
+	String maxPriceProductName = null;
+	// TO-DO
+	
+}
