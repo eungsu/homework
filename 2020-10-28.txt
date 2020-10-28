@@ -1,0 +1,76 @@
+StoreApp.java
+	1. 전체도서 조회
+		BookService객체의 getBooks() 메소드 호출 
+		-> ArrayList<Book> 획득됨 
+		-> 화면에 모든 책 정보 출력
+		
+	2. 도서 검색
+		t,제목	
+			BookService의 searchBooksByTitle() 메소드 호출
+			-> ArrayList<Book> 획득됨
+			-> 화면에 검색된 책 정보 출력
+		w,저자
+			BookService의 searchBooksByWriter() 메소드 호출
+			-> ArrayList<Book> 획득됨
+			-> 화면에 검색된 책 정보 출력
+		p,가격,가격
+			BookService의 searchBooksByPrice() 메소드 호출
+			-> ArrayList<Book> 획득됨
+			-> 화면에 검색된 책 정보 출력
+		사용자가 입력한 내용을 String의 split(구분문자)메소드로 조각낸다.
+		-> 배열이 획득된다.
+		-> 배열의 0번째 칸에는 t, w, p중에서 하나가 들어있다.
+		-> 배열의 0번째 칸의 값이 t일 때, w일 때, p일 때 구분해서 코딩
+		
+	3. 신규 도서 등록
+		BookService객체의 insertNewBook(인자) 메소드 호출
+		제목, 저자, 장르, 가격을 입력받는다.
+		Book객체를 생성해서 입력받은 값을 저장하고,
+		BookService의 insertNewBook()메소드를 호출한다.
+	4. 도서 정보 변경
+		
+BookService.java
+    // 전체 책정보를 반환하는 기능
+	public ArrayList<Book> getBooks() { ... }
+
+    // 제목으로 책정보를 검색하는 기능
+	public ArrayList<Book> searchBooksByTitle(String title) {
+		BookRepository의 getAllBooks()를 실행해서 모든 책정보 획득
+		전달받은 키워드가 포함된 책을 찾아서새로운 ArrayList에 담아서 반환
+	}
+
+    // 저자로 책정보를 검색하는 기능
+	public ArrayList<Book> searchBooksByWriter(String writer) { 
+		BookRepository의 getAllBooks()를 실행해서 모든 책정보 획득
+		전달받은 저자와 일치하는 책을 찾아서새로운 ArrayList에 담아서 반환
+	}
+
+    // 가격으로 책정보를 검색하는 기능
+	public ArrayList<Book> seachBooksByPrice(int min, int max) {
+		BookRepository의 getAllBooks()를 실행해서 모든 책정보 획득
+		전달받은 가격범위에 포함된 책을 찾아서새로운 ArrayList에 담아서 반환
+	}
+
+    // 신규도서를 등록하는 기능
+	public void insertNewBook(Book book) {
+		BookRepository의 insertBook()메소들 실행해서 책정보 저장
+	}
+
+    // 책정보를 변경하는 기능
+	public boolean updateBook(Book book) { ... } 
+
+BookRepository.java
+    // 모든 책정보 제공하는 기능
+	public ArrayList<Book> getAllBooks() { ... }
+
+    // 책정보 등록하는 기능
+	public void insertBook(Book book) { ... }
+
+    // 책정보를 변경하는 기능
+	public void modifyBook(Book book) { ... }
+
+
+
+
+
+
