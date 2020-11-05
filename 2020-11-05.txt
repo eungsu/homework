@@ -1,0 +1,21 @@
+dept2테이블의 정보를 다루는 VO 객체 Dept 만들기
+dept2테이블의 정보를 엑세스하는 DAO객체 DeptDao 만들기
+dept2테이블의 모든 부서정보를 조회하는 기능을 DeptDao에 구현하기
+
+gogak테이블의 정보를 다루는 VO 객체 Gogak 만들기
+gogak테이블의 정보를 엑세스하는 DAO객체 GogakDao 만들기
+gogak테이블의 모든 고객정보를 조회하는 기능을 Gogak에 구현하기
+
+vo/Dept.java
+vo/Gogak.java
+
+dao/DeptDao.java
+	public List<Dept> selectAllDept() throws SQLException {}
+dao/GogakDao.java
+	public List<Gogak> selectAllGogak() throws SQLException {}
+
+app/DeptSelectAll.java로 결과 확인
+app/GogakSelectAll.java로 결과 확인
+
+
+
